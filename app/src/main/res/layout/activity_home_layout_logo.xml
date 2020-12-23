@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@+id/activity_home_text_view_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/print_clearly"
+    android:text="CapiTiPalism"
+    android:textColor="@color/capitipalism_white"
+    android:textSize="40sp"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

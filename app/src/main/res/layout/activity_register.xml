@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_activity_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/capitipalism_primary"
+    tools:context="com.capitipalismadmin.ui.register.Register">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/register_form_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/hyphen_top_round"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/register_btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/hyphen_button_default"
+            android:paddingStart="35dp"
+            android:paddingLeft="35dp"
+            android:paddingEnd="35dp"
+            android:paddingRight="35dp"
+            android:text="Signup"
+            android:textColor="@color/capitipalism_white"
+            app:layout_constraintBottom_toTopOf="@+id/register_no_acc_container"
+            app:layout_constraintEnd_toEndOf="@+id/register_no_acc_container"
+            app:layout_constraintStart_toStartOf="@+id/register_no_acc_container" />
+
+        <EditText
+            android:id="@+id/register_txt_url"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="URL"
+            android:inputType="textUri"
+            android:paddingLeft="50dp"
+            android:textSize="15sp"
+            android:theme="@style/CapiTiPalismEditText"
+            app:layout_constraintBottom_toTopOf="@+id/register_btn_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/register_password_icon"
+            android:layout_width="21dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:adjustViewBounds="false"
+            app:layout_constraintBottom_toBottomOf="@+id/register_txt_url"
+            app:layout_constraintStart_toStartOf="@+id/register_txt_url"
+            app:layout_constraintTop_toTopOf="@+id/register_txt_url"
+            app:srcCompat="@drawable/ic_capitipalism_url" />
+
+        <EditText
+            android:id="@+id/register_sponsor_id"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="Sponsor ID"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="50dp"
+            android:textSize="15sp"
+            android:theme="@style/CapiTiPalismEditText"
+            app:layout_constraintBottom_toTopOf="@+id/register_txt_url"
+            app:layout_constraintEnd_toEndOf="@+id/register_txt_url"
+            app:layout_constraintStart_toStartOf="@+id/register_txt_url" />
+
+        <ImageView
+            android:id="@+id/register_email_icon"
+            android:layout_width="21dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:adjustViewBounds="false"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/register_sponsor_id"
+            app:layout_constraintStart_toStartOf="@+id/register_sponsor_id"
+            app:layout_constraintTop_toTopOf="@+id/register_sponsor_id"
+            app:srcCompat="@drawable/ic_capitipalism_sponsor" />
+
+        <EditText
+            android:id="@+id/register_txt_id"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="ID"
+            android:inputType="textPersonName"
+            android:paddingLeft="50dp"
+            android:textSize="15sp"
+            android:theme="@style/CapiTiPalismEditText"
+            app:layout_constraintBottom_toTopOf="@+id/register_sponsor_id"
+            app:layout_constraintEnd_toEndOf="@+id/register_sponsor_id"
+            app:layout_constraintStart_toStartOf="@+id/register_sponsor_id" />
+
+        <ImageView
+            android:id="@+id/register_user_icon"
+            android:layout_width="21dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:adjustViewBounds="false"
+            android:contentDescription="TODO"
+            app:layout_constraintBottom_toBottomOf="@+id/register_txt_id"
+            app:layout_constraintStart_toStartOf="@+id/register_txt_id"
+            app:layout_constraintTop_toTopOf="@+id/register_txt_id"
+            app:srcCompat="@drawable/ic_capitipalism_identification" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/register_no_acc_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/register_lbl_have_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textColor="@color/capitipalism_primary"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/register_lbl_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="Login."
+                android:textColor="@color/capitipalism_accent"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/register_lbl_have_account"
+                app:layout_constraintStart_toEndOf="@+id/register_lbl_have_account"
+                app:layout_constraintTop_toTopOf="@+id/register_lbl_have_account" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/register_progress_register"
+            style="@style/SpinKitView.Large.ThreeBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:visibility="invisible"
+            app:SpinKit_Color="@color/capitipalism_primary"
+            app:layout_constraintBottom_toTopOf="@+id/register_txt_id"
+            app:layout_constraintEnd_toEndOf="@+id/register_txt_id"
+            app:layout_constraintStart_toStartOf="@+id/register_txt_id" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/register_lottie_logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/register_form_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="welcome_logo_2.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/register_lbl_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="C  A  P  I  -  T  I  P  -  L  I  S  I  M"
+        android:textColor="@color/capitipalism_white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/register_lottie_logo"
+        app:layout_constraintStart_toStartOf="@+id/register_lottie_logo"
+        app:layout_constraintTop_toBottomOf="@+id/register_lottie_logo" />
+
+    <ImageView
+        android:id="@+id/register_page_search"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/circular_background_blue"
+        android:clickable="true"
+        android:contentDescription="Search Icon"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hyphen_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fragment_home_dashboard_menus_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cardMarginHorizontal"
+        android:layout_marginTop="@dimen/cardMarginVertical"
+        android:layout_marginRight="@dimen/cardMarginHorizontal"
+        android:layout_marginBottom="@dimen/cardMarginVertical"
+        android:paddingTop="2dp"
+        android:paddingRight="2dp"
+        app:cardBackgroundColor="@color/colorLightWhiteShade3"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="#1C606B">
+
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:id="@+id/arc_progress"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:arc_bottom_text="2nd"
+                app:arc_bottom_text_size="8dp"
+                app:arc_finished_color="@color/main_silver_color"
+                app:arc_max="7"
+                app:arc_progress="2"
+                app:arc_stroke_width="7dp"
+                app:arc_suffix_text_size="0dp"
+                app:arc_text_color="@color/main_silver_color"
+                app:arc_text_size="20dp"
+                app:arc_unfinished_color="#27000000"
+                app:layout_constraintBottom_toBottomOf="@+id/quick_info_all_users_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/quick_info_all_users_icon"
+                app:layout_constraintTop_toTopOf="@+id/quick_info_all_users_icon" />
+
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:id="@+id/arc_progress2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:arc_bottom_text="1st"
+                app:arc_bottom_text_size="8dp"
+                app:arc_finished_color="@color/main_silver_color"
+                app:arc_max="7"
+                app:arc_progress="3"
+                app:arc_stroke_width="7dp"
+                app:arc_suffix_text_size="0dp"
+                app:arc_text_color="@color/main_silver_color"
+                app:arc_text_size="20dp"
+                app:arc_unfinished_color="#27000000"
+                app:layout_constraintBottom_toBottomOf="@+id/quick_info_all_users_icon"
+                app:layout_constraintEnd_toStartOf="@+id/quick_info_all_users_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/quick_info_all_users_icon" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/quick_info_all_users_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/circular_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_capitipalism_users" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="ALL REGISTERED USERS"
+                android:textColor="@color/capitipalism_white"
+                app:layout_constraintEnd_toEndOf="@+id/quick_info_all_users_icon"
+                app:layout_constraintStart_toStartOf="@+id/quick_info_all_users_icon"
+                app:layout_constraintTop_toBottomOf="@+id/quick_info_all_users_icon" />
+
+            <TextView
+                android:id="@+id/user_count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="11"
+                android:textColor="@color/capitipalism_white"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView3"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generation Users"
+                android:textColor="@color/main_silver_color"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="@+id/arc_progress2"
+                app:layout_constraintStart_toStartOf="@+id/arc_progress2"
+                app:layout_constraintTop_toBottomOf="@+id/arc_progress2" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generation Users"
+                android:textColor="@color/main_silver_color"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="@+id/arc_progress"
+                app:layout_constraintStart_toStartOf="@+id/arc_progress"
+                app:layout_constraintTop_toBottomOf="@+id/arc_progress2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content">
+
+                    <com.github.lzyzsd.circleprogress.ArcProgress
+                        android:id="@+id/arc_progress1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:arc_bottom_text="USERS"
+                        app:arc_bottom_text_size="8dp"
+                        app:arc_finished_color="@color/colorPrimary"
+                        app:arc_progress="65"
+                        app:arc_stroke_width="7dp"
+                        app:arc_suffix_text="Br"
+                        app:arc_suffix_text_size="8dp"
+                        app:arc_text_color="@color/colorPrimary"
+                        app:arc_text_size="20dp"
+                        app:arc_unfinished_color="@color/colorLightWhiteShade1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Space
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent" />
+
+                <Space
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:scrollbarStyle="outsideInset">
+
+                    <com.github.lzyzsd.circleprogress.ArcProgress
+                        android:id="@+id/arc_progress3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:arc_bottom_text="VOUCHERS"
+                        app:arc_bottom_text_size="8dp"
+                        app:arc_finished_color="@color/colorPrimaryScheme3"
+                        app:arc_progress="85"
+                        app:arc_stroke_width="7dp"
+                        app:arc_suffix_text="Br"
+                        app:arc_suffix_text_size="8dp"
+                        app:arc_text_color="@color/colorPrimaryScheme3"
+                        app:arc_text_size="20dp"
+                        app:arc_unfinished_color="@color/colorLightWhiteShade1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

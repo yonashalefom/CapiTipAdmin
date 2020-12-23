@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/capitipalism_primary"
+    tools:context=".ui.login.Login">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_form_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/hyphen_top_round"
+        android:minHeight="225dp"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/login_scan_nfc_logo"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:tint="@color/capitipalism_primary"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/login_progress_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="super_admin_confirm_identity.json"
+            app:lottie_loop="true" />
+
+        <Button
+            android:id="@+id/login_btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/hyphen_button_default"
+            android:paddingStart="35dp"
+            android:paddingLeft="35dp"
+            android:paddingEnd="35dp"
+            android:paddingRight="35dp"
+            android:text="Login"
+            android:textColor="@color/capitipalism_white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/login_no_acc_container"
+            app:layout_constraintEnd_toEndOf="@+id/login_no_acc_container"
+            app:layout_constraintStart_toStartOf="@+id/login_no_acc_container" />
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/login_txt_url"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_marginStart="24dp"-->
+        <!--            android:layout_marginEnd="24dp"-->
+        <!--            android:layout_marginBottom="16dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:hint="URL"-->
+        <!--            android:inputType="textUri"-->
+        <!--            android:paddingLeft="50dp"-->
+        <!--            android:textSize="15sp"-->
+        <!--            android:theme="@style/CapiTiPalismEditText"-->
+        <!--            android:visibility="visible"-->
+        <!--            app:layout_constraintBottom_toTopOf="@+id/login_btn_register"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/login_password_icon"-->
+        <!--            android:layout_width="21dp"-->
+        <!--            android:layout_height="20dp"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginLeft="16dp"-->
+        <!--            android:adjustViewBounds="false"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/login_txt_url"-->
+        <!--            app:layout_constraintStart_toStartOf="@+id/login_txt_url"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/login_txt_url"-->
+        <!--            app:srcCompat="@drawable/ic_capitipalism_url" />-->
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/rounded_edit_text_normal"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="50dp"
+            android:textSize="15sp"
+            android:theme="@style/CapiTiPalismEditText"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/login_btn_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/login_password_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:adjustViewBounds="false"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/login_password"
+            app:layout_constraintStart_toStartOf="@+id/login_password"
+            app:layout_constraintTop_toTopOf="@+id/login_password"
+            app:srcCompat="@drawable/ic_capitipalism_password" />
+
+        <EditText
+            android:id="@+id/login_txt_id"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_edit_text_normal"
+            android:ems="10"
+            android:hint="Admin ID"
+            android:inputType="textPersonName"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="SuperAdmin"
+            android:textSize="15sp"
+            android:theme="@style/CapiTiPalismEditText"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/login_password"
+            app:layout_constraintEnd_toEndOf="@+id/login_password"
+            app:layout_constraintStart_toStartOf="@+id/login_password" />
+
+        <ImageView
+            android:id="@+id/login_userid_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:adjustViewBounds="false"
+            android:contentDescription="TODO"
+            android:padding="2dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/login_txt_id"
+            app:layout_constraintStart_toStartOf="@+id/login_txt_id"
+            app:layout_constraintTop_toTopOf="@+id/login_txt_id"
+            app:srcCompat="@drawable/ic_capitipalism_badge" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/login_no_acc_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/login_lbl_have_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textColor="@color/capitipalism_primary"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/login_lbl_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="Login."
+                android:textColor="@color/capitipalism_accent"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/login_lbl_have_account"
+                app:layout_constraintStart_toEndOf="@+id/login_lbl_have_account"
+                app:layout_constraintTop_toTopOf="@+id/login_lbl_have_account" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/login_progress_register"
+            style="@style/SpinKitView.Large.ThreeBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:visibility="invisible"
+            app:SpinKit_Color="@color/capitipalism_primary"
+            app:layout_constraintBottom_toTopOf="@+id/login_nfc_message"
+            app:layout_constraintEnd_toEndOf="@+id/login_txt_id"
+            app:layout_constraintStart_toStartOf="@+id/login_txt_id" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:padding="2dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/login_txt_id"
+            app:layout_constraintEnd_toEndOf="@+id/login_txt_id"
+            app:layout_constraintTop_toTopOf="@+id/login_txt_id"
+            app:srcCompat="@drawable/ic_capitipalism_tag" />
+
+        <TextView
+            android:id="@+id/login_nfc_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Tap your NFC tag with your phone for easy sign-in. "
+            android:textColor="@color/capitipalism_primary"
+            app:layout_constraintBottom_toTopOf="@+id/login_txt_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/login_lottie_logo"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_form_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="admin_login_page.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/login_lbl_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="C  A  P  A  -  T  I  P  -  A  D  M  I  N"
+        android:textColor="@color/capitipalism_white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/login_lottie_logo"
+        app:layout_constraintStart_toStartOf="@+id/login_lottie_logo"
+        app:layout_constraintTop_toBottomOf="@+id/login_lottie_logo" />
+
+    <ImageView
+        android:id="@+id/login_page_search"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/circular_background_blue"
+        android:clickable="true"
+        android:contentDescription="Search Icon"
+        android:padding="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hyphen_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Capa-TIP-Admin</string>
+
+    <string name="samplereview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium bibendum sapien, ut euismod massa. Duis convallis sem sed turpis elementum auctor.</string>
+
+    <!--region Home Screen-->
+    <string name="home_screen_logo_text">Highlight™ Trading</string>
+
+    <string name="home_screen_dashboard_menu_item_voucher">Voucher</string>
+    <string name="home_screen_dashboard_menu_item_voucher_description">Voucher Sales</string>
+
+    <string name="home_screen_dashboard_menu_item_topup">Topup</string>
+    <string name="home_screen_dashboard_menu_item_topup_description">Mobile Topup</string>
+
+    <string name="home_screen_dashboard_menu_item_electricity_bill">Electricity</string>
+    <string name="home_screen_dashboard_menu_item_electricity_bill_description">Electricity Bill</string>
+
+    <string name="home_screen_dashboard_menu_item_water_bill">Water</string>
+    <string name="home_screen_dashboard_menu_item_water_bill_description">Water Bill</string>
+
+    <string name="home_screen_dashboard_menu_item_activity">Activity</string>
+    <string name="home_screen_dashboard_menu_item_activity_description">Account Activity</string>
+
+    <string name="home_screen_dashboard_menu_item_withdraw">Withdraw</string>
+    <string name="home_screen_dashboard_menu_item_withdraw_description">Cash Out Locations</string>
+    <!--endregion-->
+</resources>

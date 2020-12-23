@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/social_links_dialog_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Link 1"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/social_links_dialog_twitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Link 2"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/social_links_dialog_instagram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Link 3"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="18sp" />
+</LinearLayout>

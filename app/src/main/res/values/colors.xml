@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/capitipalism_primary</color>
+    <color name="colorPrimaryDark">@color/capitipalism_primary</color>
+    <color name="colorAccent">@color/capitipalism_accent</color>
+
+    <!--region Color Schemes 1-->
+    <color name="colorPrimaryScheme1">#A4243B</color>
+    <color name="colorPrimaryScheme2">#FC7753</color>
+    <color name="colorPrimaryScheme3">#D8973C</color>
+    <color name="colorPrimaryScheme4">#BD632F</color>
+    <!--endregion-->
+
+    <!--Main Colors-->
+    <color name="main_white">#ffffff</color>
+    <color name="main_black">#000000</color>
+    <color name="main_gray">#E9EAEE</color>
+    <color name="main_light_gray">#EEEEEE</color>
+    <color name="main_text_gray">#9F9F9F</color>
+
+    <!--region Basic Colors-->
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLightWhite">#EFEFEF</color>
+    <color name="colorLightWhiteShade1">#E6E6E6</color>
+    <color name="colorLightWhiteShade2">#F1F1F1</color>
+    <color name="colorLightWhiteShade3">#FAFAFA</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackTransparent">#59000000</color>
+    <!--endregion-->
+
+    <!--Sign Up-->
+    <color name="signup_btt">#4f81bc</color>
+    <color name="main_silver_color">#b6c0bf</color>
+
+    <!-- region Custom Colors -->
+    <!-- region Main Colors -->
+    <color name="capitipalism_white">#FFFFFF</color>
+    <color name="capitipalism_black">#000000</color>
+    <!-- region endregion -->
+
+    <!-- region CapiTiPalism Colors -->
+    <color name="capitipalism_primary">#00A1CD</color>
+    <color name="capitipalism_accent">#048EBC</color>
+    <color name="capitipalism_success">#2ABB49</color>
+    <color name="capitipalism_error">#BB2A38</color>
+    <color name="capitipalism_inactive">#6F6F6F</color>
+    <!-- endregion -->
+    <!-- endregion -->
+
+    <!-- region Other Colors-->
+    <color name="unselected_text_color">#717171</color>
+    <!-- endregion -->
+</resources>
