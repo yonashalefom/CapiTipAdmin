@@ -34,10 +34,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.register.Register" />
-        <activity android:name=".ui.dashboard.Home" >
+        <activity android:name=".ui.dashboard.Home">
 
         </activity>
         <activity android:name=".ui.imageviewer.FullScreenActivity" />
+        <activity android:name=".ui.login.LoginColorConfirmation" />
     </application>
 
 </manifest>

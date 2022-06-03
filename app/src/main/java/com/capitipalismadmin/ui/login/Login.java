@@ -101,8 +101,8 @@ public class Login extends AppCompatActivity {
 
         // startActivity(new Intent(Login.this, Home.class));
         // region todo remove this auto login
-        CapiUserManager.removeUserData(this);
-        CapiUserManager.saveUserData(this, "SuperAdmin", "Super Admin");
+//        CapiUserManager.removeUserData(this);
+//        CapiUserManager.saveUserData(this, "Boss", "Admin");
         // endregion
 
         CapiUserManager.loadUserData(getApplicationContext());

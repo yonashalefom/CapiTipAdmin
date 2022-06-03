@@ -24,6 +24,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.capitipalismadmin.R;
 import com.capitipalismadmin.classes.CapiUserManager;
 import com.capitipalismadmin.ui.helpers.AlertCreator;
+import com.capitipalismadmin.ui.login.LoginColorConfirmation;
 import com.capitipalismadmin.ui.profile.Profile;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -69,6 +70,7 @@ public class UsersSearchAdapter extends RecyclerView.Adapter<UsersSearchAdapter.
         FrameLayout user_holder_write_nfc_tag_add;
         FrameLayout user_holder_delete_user;
         FrameLayout user_holder_logout_user;
+        FrameLayout user_holder_change_color_password;
         EditText user_holder_editText;
 
         SearchViewHolder(View itemView) {
@@ -78,6 +80,7 @@ public class UsersSearchAdapter extends RecyclerView.Adapter<UsersSearchAdapter.
             user_holder_write_nfc_tag_add = itemView.findViewById(R.id.user_holder_write_nfc_tag_add);
             user_holder_delete_user = itemView.findViewById(R.id.user_holder_delete_user);
             user_holder_logout_user = itemView.findViewById(R.id.user_holder_logout_user);
+            user_holder_change_color_password = itemView.findViewById(R.id.user_holder_change_color_password);
             userName = itemView.findViewById(R.id.user_name);
             profileImage = itemView.findViewById(R.id.user_image);
             userStatus = itemView.findViewById(R.id.user_status);
@@ -116,7 +119,7 @@ public class UsersSearchAdapter extends RecyclerView.Adapter<UsersSearchAdapter.
     // region Bind View Holder
     @SuppressLint("ResourceAsColor")
     @Override
-    public void onBindViewHolder(SearchViewHolder holder, int position) {
+    public void onBindViewHolder(SearchViewHolder holder, @SuppressLint("RecyclerView") int position) {
         CapiUserManager.loadUserData(context);
         System.out.println("##########################################################");
         System.out.println("USER DATA: " + CapiUserManager.getCurrentUserID());
@@ -143,7 +146,7 @@ public class UsersSearchAdapter extends RecyclerView.Adapter<UsersSearchAdapter.
             });
         }
 
-        if(userValidationList.get(position).equals("null") && !(userNewList.get(position).equals("true"))){
+        if (userValidationList.get(position).equals("null") && !(userNewList.get(position).equals("true"))) {
             holder.userName.setTextColor(Color.BLUE);
         }
 
@@ -204,6 +207,7 @@ public class UsersSearchAdapter extends RecyclerView.Adapter<UsersSearchAdapter.
         if (CapiUserManager.getUserType().equals("Super Admin")) {
 
             holder.user_holder_logout_user.setVisibility(View.GONE);
+            holder.user_holder_change_color_password.setVisibility(View.GONE);
             holder.nfc_image_right.setVisibility(View.VISIBLE);
             holder.user_holder_write_nfc_tag_add.setVisibility(View.GONE);
             holder.userBalance.setText(userBalanceList.get(position) + "");
@@ -276,6 +280,7 @@ public class UsersSearchAdapter extends RecyclerView.Adapter<UsersSearchAdapter.
 //                context.startActivity(userProfileIntent);
 //            });
             holder.user_holder_logout_user.setVisibility(View.VISIBLE);
+            holder.user_holder_change_color_password.setVisibility(View.VISIBLE);
             holder.user_holder_delete_user.setVisibility(View.GONE);
             holder.userBalance.setText(userBalanceList.get(position) + "");
             holder.user_holder_editText.setText(userBalanceList.get(position) + "");
@@ -300,6 +305,16 @@ public class UsersSearchAdapter extends RecyclerView.Adapter<UsersSearchAdapter.
                             Toast.makeText(context, Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_LONG).show();
                         }
                     });
+                }
+            });
+
+            holder.user_holder_change_color_password.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, LoginColorConfirmation.class);
+                    intent.putExtra("changeUserColorPassword", "TRUE");
+                    intent.putExtra("currentlySelectedUserId", profileIDList.get(position));
+                    ((Activity) context).startActivityForResult(intent, 2);
                 }
             });
 

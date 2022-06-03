@@ -50,4 +50,18 @@
     <!-- region Other Colors-->
     <color name="unselected_text_color">#717171</color>
     <!-- endregion -->
+
+    <!--region Theme Colors-->
+    <color name="color_code_default">#b6c0bf</color>
+    <color name="color_code_1">#4F81BD</color>
+    <color name="color_code_2">#914C18</color>
+    <color name="color_code_3">#7030A0</color>
+    <color name="color_code_4">#FFC000</color>
+    <color name="color_code_5">#28A17B</color>
+    <color name="color_code_6">#7F7F7F</color>
+    <color name="color_code_7">#4A3F30</color>
+    <color name="color_code_8">#E13D20</color>
+    <color name="color_code_9">#3751AF</color>
+    <color name="color_code_10">#00B050</color>
+    <!--endregion-->
 </resources>

@@ -1,5 +1,6 @@
 package com.capitipalismadmin.ui.profile;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -32,6 +33,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.capitipalismadmin.R;
 import com.capitipalismadmin.classes.CapiUserManager;
 import com.capitipalismadmin.ui.adapters.UsersSearchAdapter;
@@ -537,6 +539,26 @@ public class Profile extends AppCompatActivity implements AsyncUiCallback {
                     Log.d("Profile", "uploadImage listener failed: " + Objects.requireNonNull(task.getException()).getMessage());
                 }
             });
+        } else if (requestCode == 2 && resultCode == RESULT_OK) {
+            if (data.getStringExtra("VERIFICATION_RESULT").equals("VERIFICATION_SUCCESSFUL")) {
+
+            } else if (data.getStringExtra("VERIFICATION_RESULT").equals("NEW_PASSWORD_SET")) {
+                String newColorPassword = data.getStringExtra("NEW_COLOR_CODE");
+                String currentlySelectedUserId = data.getStringExtra("currentlySelectedUserId");
+                DatabaseReference selectedUserDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(currentlySelectedUserId);
+
+                Map<String, Object> colorPasswordChangeMap = new HashMap<>();
+                colorPasswordChangeMap.put("colorPassword", newColorPassword);
+                selectedUserDatabase.updateChildren(colorPasswordChangeMap).addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        AlertCreator.showSuccessAlert(Profile.this, "Color Password Changed", "Selected user color password changed.");
+                    } else {
+                        Toast.makeText(getApplicationContext(), Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
+            } else {
+                Toast.makeText(getApplicationContext(), "Unable to Change Color Code. Please try again.", Toast.LENGTH_SHORT).show();
+            }
         }
     }
     // endregion
@@ -550,7 +572,6 @@ public class Profile extends AppCompatActivity implements AsyncUiCallback {
             if (CapiUserManager.getUserType().equals("Super Admin")) {
                 profile_back_button.setVisibility(View.VISIBLE);
                 super.onBackPressed();
-
             } else {
                 profile_back_button.setVisibility(View.INVISIBLE);
 

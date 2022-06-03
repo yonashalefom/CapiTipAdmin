@@ -267,7 +267,7 @@
                 android:id="@+id/user_holder_logout_user"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#EDB5B5">
+                android:background="#DC290A">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -286,6 +286,32 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/ic_capitipalism_logout" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/user_holder_change_color_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#DD8923">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:tint="@color/capitipalism_white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_password_svgrepo_com" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </FrameLayout>
 
@@ -362,10 +388,6 @@
 
         </LinearLayout>
     </ru.rambler.libs.swipe_layout.SwipeLayout>
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
